@@ -6,5 +6,6 @@ namespace ApplicationTeatro.ObraApp
 {
     public interface IObraApp
     {
+
     }
 }

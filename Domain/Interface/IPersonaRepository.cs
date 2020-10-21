@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ApplicationTeatro.PersonApp
+namespace Domain.Interface
 {
-    public interface IPersonaApp
+    public interface IPersonaRepository
     {
         public Task<List<Espectador>> GetEspectadors();
     }

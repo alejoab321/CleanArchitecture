@@ -1,9 +1,12 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿
+using Domain.Interface;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using TeatroPersistence.SqlServer.Persona;
 
-namespace InfrastructureTeatro
+namespace InfrastructureTeatroIoc
 {
     public class DependencyContainer
     {
@@ -11,6 +14,7 @@ namespace InfrastructureTeatro
         {
             //CleanArchitecture.Application
             //services.AddScoped<IBookService, BookService>();
+            services.AddTransient<IPersonaRepository>(persona => new PersonaSql(connectionString));
 
             ////CleanArchitecture.Domain.Interfaces | CleanArchitecture.Infra.Data.Repositories
             //services.AddScoped<IBookRepository, BookRepository>();

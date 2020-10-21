@@ -6,6 +6,7 @@ namespace Domain.Entities.Person
 {
     public abstract class Espectador
     {
+        public int IdPersona { get; set; }
         public string Nombre { get; set; }
         public Espectador(string nombre)
         {

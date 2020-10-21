@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeatroPersistence", "Teatro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppTeatro", "WpfAppTeatro\WpfAppTeatro.csproj", "{A28BAA6C-6DEB-47F5-8DC9-CF21E3EB310F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfastructureTeatroIoC", "InfastructureTeatrioIoC\InfastructureTeatroIoC.csproj", "{290C707A-00D2-4D2C-8325-001B89E10E26}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{A28BAA6C-6DEB-47F5-8DC9-CF21E3EB310F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A28BAA6C-6DEB-47F5-8DC9-CF21E3EB310F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A28BAA6C-6DEB-47F5-8DC9-CF21E3EB310F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{290C707A-00D2-4D2C-8325-001B89E10E26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{290C707A-00D2-4D2C-8325-001B89E10E26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{290C707A-00D2-4D2C-8325-001B89E10E26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{290C707A-00D2-4D2C-8325-001B89E10E26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{CBA85C82-DDF1-4AF3-AA37-1CC49F40C1C4} = {407633FA-35EE-4062-BEF0-F4772AEBDC3F}
 		{A217D715-36D3-4027-97E9-1B5237EC393A} = {9AA52DE2-1910-437E-9130-6F0B5D3A1E63}
 		{A28BAA6C-6DEB-47F5-8DC9-CF21E3EB310F} = {D37CFAEF-A968-4C90-86DF-B38A6EBCCDCA}
+		{290C707A-00D2-4D2C-8325-001B89E10E26} = {407633FA-35EE-4062-BEF0-F4772AEBDC3F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9864F3A-F3CF-475C-940F-AAC8209DEA75}

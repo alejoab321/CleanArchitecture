@@ -1,4 +1,4 @@
-﻿using InfrastructureTeatro;
+﻿using InfrastructureTeatroIoc;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
