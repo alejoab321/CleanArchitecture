@@ -25,7 +25,7 @@ namespace TeatroPersistence.SqlServer.Persona
             try
             {
                 await sqlConnection.OpenAsync();
-                string query = "SELET * FROM Persona";
+                string query = "SELECT * FROM Persona";
                 SqlCommand command = new SqlCommand(query, sqlConnection);
                 var reader = await command.ExecuteReaderAsync();
                 while (reader.Read())

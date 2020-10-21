@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApplicationTeatro\ApplicationTeatro.csproj" />
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\TeatroPersistence\TeatroPersistence.csproj" />
   </ItemGroup>

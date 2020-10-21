@@ -1,4 +1,5 @@
 ﻿using Domain.Entities.Person;
+using Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,9 +9,15 @@ namespace ApplicationTeatro.PersonApp
 {
     public class PersonaAppImpl : IPersonaApp
     {
-        public Task<List<Espectador>> GetEspectadors()
+        private readonly IPersonaRepository _personaRepository;
+        public PersonaAppImpl(IPersonaRepository personaRepository)
         {
-            throw new NotImplementedException();
+            _personaRepository = personaRepository;
+        }
+                
+        public async Task<List<Espectador>> GetEspectadors()
+        {
+            return await _personaRepository.GetEspectadors();
         }
     }
 }

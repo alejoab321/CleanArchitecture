@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApplicationTeatro\ApplicationTeatro.csproj" />
     <ProjectReference Include="..\InfastructureTeatrioIoC\InfastructureTeatroIoC.csproj" />
   </ItemGroup>
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ApplicationTeatro.TeatroApp
 {
-    public interface IPersonaApp
+    public interface ITeatroApp
     {
     }
 }

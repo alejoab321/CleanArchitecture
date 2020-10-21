@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ApplicationTeatro.PersonApp;
+using ApplicationTeatro.TeatroApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,17 @@ namespace WpfAppTeatro
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly IPersonaApp _personaApp;
+        public MainWindow(IPersonaApp personaApp)
         {
+            _personaApp = personaApp;
             InitializeComponent();
+        }
+        protected async override void OnInitialized(EventArgs e)
+        {
+            var personaList =  await _personaApp.GetEspectadors();
+            DG.ItemsSource = personaList;
+            base.OnInitialized(e);
         }
     }
 }

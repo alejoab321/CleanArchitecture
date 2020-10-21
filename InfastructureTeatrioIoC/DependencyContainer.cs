@@ -1,4 +1,5 @@
 ﻿
+using ApplicationTeatro.PersonApp;
 using Domain.Interface;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -15,6 +16,7 @@ namespace InfrastructureTeatroIoc
             //CleanArchitecture.Application
             //services.AddScoped<IBookService, BookService>();
             services.AddTransient<IPersonaRepository>(persona => new PersonaSql(connectionString));
+            services.AddTransient<IPersonaApp, PersonaAppImpl>();
 
             ////CleanArchitecture.Domain.Interfaces | CleanArchitecture.Infra.Data.Repositories
             //services.AddScoped<IBookRepository, BookRepository>();
