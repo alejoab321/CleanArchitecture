@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="SqlServer\Teatro\" />
     <Folder Include="SqlServer\Obra\" />
   </ItemGroup>
 

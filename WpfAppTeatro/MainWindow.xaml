@@ -9,18 +9,27 @@
     <Grid ShowGridLines="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Button Grid.Column="0" Grid.Row="0" Width="100" HorizontalAlignment="Right">Nuevo</Button>
-        <DataGrid Name="DG" AutoGenerateColumns="False" IsReadOnly="False" Grid.Column="0" Grid.Row="1" SelectionChanged="DG_SelectionChanged">
+        <Button Grid.Column="1" Grid.Row="0" Width="100" HorizontalAlignment="Right">Nuevo</Button>
+        <DataGrid Name="DGTeatro" AutoGenerateColumns="False" IsReadOnly="False" Grid.Column="0" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Capacidad" Binding="{Binding Capacidad}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Ocupados" Binding="{Binding Nombre}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Disponibles" Binding="{Binding Nombre}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Name="DG" AutoGenerateColumns="False" IsReadOnly="False" Grid.Column="1" Grid.Row="1" SelectionChanged="DG_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="IdPersona" Binding="{Binding IdPersona}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"></DataGridTextColumn>
             </DataGrid.Columns>
-            
+
         </DataGrid>
     </Grid>
 </Window>

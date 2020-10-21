@@ -24,15 +24,19 @@ namespace WpfAppTeatro
     public partial class MainWindow : Window
     {
         private readonly IPersonaApp _personaApp;
-        public MainWindow(IPersonaApp personaApp)
+        private readonly ITeatroApp _teatroApp;
+        public MainWindow(IPersonaApp personaApp,ITeatroApp teatroApp)
         {
             _personaApp = personaApp;
+            _teatroApp = teatroApp;
             InitializeComponent();
         }
         protected async override void OnInitialized(EventArgs e)
         {
             var personaList =  await _personaApp.GetEspectadors();
+            var teatroList = await _teatroApp.GetAllTeatro();
             DG.ItemsSource = personaList;
+            DGTeatro.ItemsSource = teatroList;
             base.OnInitialized(e);
         }
 

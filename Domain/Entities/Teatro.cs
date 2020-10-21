@@ -8,6 +8,7 @@ namespace Domain.Entities
 {
     public class Teatro
     {
+        public int IdTeatro { get; set; }
         public string Nombre { get; set; }
         public int Capacidad { get; set; }
 
