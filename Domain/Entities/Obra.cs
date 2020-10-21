@@ -9,9 +9,11 @@ namespace Domain.Entities
     public class Obra
     {
         private long recaudo;
-        public string Titulo { get; set; }
-        public List<Espectador> Espectadores { get; set ; }
+        public int IdObra { get; set; }
         public int Hora { get; set; }
+        public int IdTeatro { get; set; }
+        public string Nombre { get; set; }
+        public List<Espectador> Espectadores { get; set ; }
         public long Recaudo 
         {
             get
@@ -28,7 +30,7 @@ namespace Domain.Entities
         public Obra(string titulo, int hora)
         {
             Espectadores = new List<Espectador>();
-            Titulo = titulo;
+            Nombre = titulo;
             Hora = hora;
         }
 

@@ -1,5 +1,7 @@
-﻿using ApplicationTeatro.PersonApp;
+﻿using ApplicationTeatro.ObraApp;
+using ApplicationTeatro.PersonApp;
 using ApplicationTeatro.TeatroApp;
+using Domain.Entities;
 using Domain.Entities.Person;
 using System;
 using System.Collections.Generic;
@@ -25,10 +27,12 @@ namespace WpfAppTeatro
     {
         private readonly IPersonaApp _personaApp;
         private readonly ITeatroApp _teatroApp;
-        public MainWindow(IPersonaApp personaApp,ITeatroApp teatroApp)
+        private readonly IObraApp _obraApp;
+        public MainWindow(IPersonaApp personaApp,ITeatroApp teatroApp,IObraApp obraApp)
         {
             _personaApp = personaApp;
             _teatroApp = teatroApp;
+            _obraApp = obraApp;
             InitializeComponent();
         }
         protected async override void OnInitialized(EventArgs e)
@@ -44,6 +48,12 @@ namespace WpfAppTeatro
         {
             var personIteM = (Espectador)DG.CurrentItem;
             var pr = personIteM.IdPersona;
+        }
+
+        private async void DGTeatro_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var teatroItem = (Teatro)DGTeatro.CurrentItem;
+            var obraList = await _obraApp.GetObrasByIdTeatro(teatroItem.IdTeatro);
         }
     }
 }

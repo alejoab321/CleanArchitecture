@@ -16,7 +16,7 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Button Grid.Column="1" Grid.Row="0" Width="100" HorizontalAlignment="Right">Nuevo</Button>
-        <DataGrid Name="DGTeatro" AutoGenerateColumns="False" IsReadOnly="False" Grid.Column="0" Grid.Row="1">
+        <DataGrid Name="DGTeatro" AutoGenerateColumns="False" IsReadOnly="False" Grid.Column="0" Grid.Row="1" SelectionChanged="DGTeatro_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Capacidad" Binding="{Binding Capacidad}"></DataGridTextColumn>

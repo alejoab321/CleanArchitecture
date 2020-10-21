@@ -26,6 +26,7 @@ namespace TeatroPersistence.SqlServer.Teatro
                 SqlCommand command = new SqlCommand("SelectAllTeatro", sqlConnection);
                 command.CommandType = CommandType.StoredProcedure;
                 var reader = await command.ExecuteReaderAsync();
+
                 while (reader.Read())
                 {
                     var teatroModel = new TeatroModel()
