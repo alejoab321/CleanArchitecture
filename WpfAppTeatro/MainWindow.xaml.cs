@@ -50,10 +50,10 @@ namespace WpfAppTeatro
             var pr = personIteM.IdPersona;
         }
 
-        private async void DGTeatro_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void DGTeatro_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var teatroItem = (Teatro)DGTeatro.CurrentItem;
-            var obraList = await _obraApp.GetObrasByIdTeatro(teatroItem.IdTeatro);
+            var result =  _obraApp.GetObrasByIdTeatro(teatroItem.IdTeatro).Result;
         }
     }
 }
