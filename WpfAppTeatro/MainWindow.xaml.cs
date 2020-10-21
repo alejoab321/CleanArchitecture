@@ -1,5 +1,6 @@
 ﻿using ApplicationTeatro.PersonApp;
 using ApplicationTeatro.TeatroApp;
+using Domain.Entities.Person;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,12 @@ namespace WpfAppTeatro
             var personaList =  await _personaApp.GetEspectadors();
             DG.ItemsSource = personaList;
             base.OnInitialized(e);
+        }
+
+        private void DG_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var personIteM = (Espectador)DG.CurrentItem;
+            var pr = personIteM.IdPersona;
         }
     }
 }
